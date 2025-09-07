@@ -1,0 +1,88 @@
+<html>
+<body>
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgVMFqT7F0JCK0y_bQNO8VzTxMx5KwcxBSQw&s">
+<div class="form-container">
+<form onsubmit="return validateForm()">
+<h2 style="color:blue">Register</h2>
+<br><br><input type="text" id="name" placeholder="full Name">
+<div id="nameError" class="error"></div>
+<br><br><input type="email" id="email" placeholder="Email">
+<div id="emailError" class="error"></div>
+<br><br><input type="password" id="password" placeholder="password">
+<div id="passwordError" class="error"></div>
+<br><br><input type="password" id="confirmPassword" placeholder="ConfirmPassword">
+<div id="confirmPasswordError" class="error"></div>
+<br><br><input type="text" id="phone" placeholder="phone Number">
+<div id="phoneError" class="error"></div>
+<br><br><button type="submit">Register</button>
+</form>
+</div>
+<script>
+function validateForm() {
+let isValid = true;
+document.querySelectorAll(".error").forEach(e=> e.innerText="");
+let name = document.getElementById("name").value.trim();
+if(name ==="") {
+document.getElementById("nameError").innerText = "Name is required";
+isValid = false;
+}
+let email = document.getElementById("email").value.trim();
+let emailPattern = /^[^]+@[^]+ \.[a-z]{2,3}$/;
+if(!email.match(emailPattern) {
+document.getElementById("emailError").innerText = "Enter a valid email";
+isValid = false;
+}
+let password = document.grtElementById("password").value;
+if(password.hlength < 6) {
+document.getElementById("passwordError").innerText = "Password must be at least 6 characters" ; 
+isValid = false;
+}
+let confirmPassword = document.getElementsById("confirmPassword").value;
+if(confirmPassword!== Password || confirmPassword==="") {
+document.getElementById("confirmPasswordError").innerText="Password do not match";
+isValid = false;
+}
+le phone = document.getElementById("phone").value.trim();
+let phonePattern = /^[0-9]{10}$/;
+if(!phone.match(phonePattern)) {
+document.getElementById("phoneError").innerText="Enter 10 digit phone number";
+isValid = false;
+}
+if(is valid) {
+alert("Registration SuccessFull!");
+}
+return is valid;
+}
+</script>
+<style>
+img {
+width:1500px;
+height:900px;
+}
+input:hover{
+transform:scale(0.8);
+background:linear-gradient(yellow,green);
+}
+button:hover{
+transform:scale(0.8);
+}
+.form-container
+{
+width:400px;
+height:450px;
+background-color:yellow;
+opacity:0.9;
+margin-left:500px;
+margin-top:-750px;
+margin-bottom:90px;
+text-align:center;
+</style>
+</body>
+</html>
+
+ 
+
+
+
+ 
+
